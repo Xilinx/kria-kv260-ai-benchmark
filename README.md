@@ -1,18 +1,18 @@
 <table class="sphinxhide">
  <tr>
-   <td align="center"><img src="docs/media/xilinx-logo.png" width="30%"/><h1>Kria&trade; KV260 Vision AI Starter Kit Benchmark </h1>
+   <td align="center"><img src="https://www.xilinx.com/content/dam/xilinx/imgs/press/media-kits/corporate/xilinx-logo.png" width="30%"/><h1>Kria&trade; KV260 Vision AI Starter Kit Benchmark </h1>
    </td>
  </tr>
 </table>
 
 # Instructions
-This repo will run following Benchmarks:
-	* Inception V4 : 299x299
-	* VGG-19 : 224x224
-	* Tiny Yolo V3 : 416x416
-	* ResNet-50 : 224x224
-	* SSD Mobilenet-V1 : 300x300
-	* SSD ResNet34 : 1200x1200
+This repo will run following Benchmarks:  
+* Inception V4 : 299x299
+* VGG-19 : 224x224
+* Tiny Yolo V3 : 416x416
+* ResNet-50 : 224x224
+* SSD Mobilenet-V1 : 300x300
+* SSD ResNet34 : 1200x1200
 
 ## Directory Structure Introduction
 
