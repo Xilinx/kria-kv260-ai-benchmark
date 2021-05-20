@@ -23,7 +23,7 @@ kria-kv260-ai-benchmark
 	│   ├── src
 	│   │   └── test_dpu_runner_mt.cpp
 	│   └── test_dpu_runner_mt
-	├── models
+	├── models (Need to be download first)
 	│   ├── b3136
 	│   │   ├── inception_v4
 	│   │   ├── mlperf_ssd_resnet34_tf
@@ -66,7 +66,7 @@ env SLEEP_MS=180000 ./test_dpu_runner_mt ../models/b3136/resnet50/resnet50.xmode
 ```
 
 
- <summary><b> Parameter about the abovecommand </b></summary>
+ <summary><b> Parameter about the above command </b></summary>
  
 | No\. | Parameter                  | Comment                                                      |
 | :--- | :----------------------- | :----------------------------------------------------------- |
