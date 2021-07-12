@@ -52,17 +52,24 @@ wget https://www.xilinx.com/bin/public/openDownload?filename=kv260-benchmark-mod
 tar -xzvf kv260-benchmark-models.tar.gz
 ```
 
+## Copy the benchmark-application folder to the target
+
+```
+cd ..
+scp -r benchmark-application root@[IP_OF_BOARD]:~/
+```
+
 # Running Benchmarks
 
 ## Running Individual Benchmark Model
 
 The following command is to run the `Resnet50` model in 1 thread.
 ```
-env SLEEP_MS=180000 ./test_dpu_runner_mt ../models/b3136/resnet50/resnet50.xmodel k_0 1
+env SLEEP_MS=180000 ./test_dpu_runner_mt models/b3136/resnet50/resnet50.xmodel k_0 1
 ```
 The following command is to run the `Resnet50` model in 2 thread.
 ```
-env SLEEP_MS=180000 ./test_dpu_runner_mt ../models/b3136/resnet50/resnet50.xmodel k_0 2
+env SLEEP_MS=180000 ./test_dpu_runner_mt models/b3136/resnet50/resnet50.xmodel k_0 2
 ```
 
 
@@ -72,7 +79,7 @@ env SLEEP_MS=180000 ./test_dpu_runner_mt ../models/b3136/resnet50/resnet50.xmode
 | :--- | :----------------------- | :----------------------------------------------------------- |
 | 1    | env SLEEP_MS=180000        | test for 180 seconds                              |
 | 2    | test_dpu_runner_mt         | test program                              |
-| 3    | ../models/b3136/resnet50/resnet50.xmodel  | test model, it should be <model>.xmodel                 |
+| 3    | models/b3136/resnet50/resnet50.xmodel  | test model, it should be <model>.xmodel                 |
 | 4    | k_0                        | kernel number, _0 means the first kernel            |
 | 5    | 1                          | thread number, 1 means run in 1 thread, 2 means run in 2 threads        |
 
