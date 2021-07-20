@@ -85,4 +85,3 @@ env SLEEP_MS=180000 ./test_dpu_runner_mt models/b3136/resnet50/resnet50.xmodel k
 
 
 Note that the default DPU integrated in SoM is B3136. Please use the corresponding model to do the benchmark.
-
