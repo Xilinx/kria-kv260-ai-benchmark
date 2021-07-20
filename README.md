@@ -85,3 +85,13 @@ env SLEEP_MS=180000 ./test_dpu_runner_mt models/b3136/resnet50/resnet50.xmodel k
 
 
 Note that the default DPU integrated in SoM is B3136. Please use the corresponding model to do the benchmark.
+
+## How to build benchmark-application
+1. Refer to [Building Petalinux](https://xilinx.github.io/kria-apps-docs/docs/build_petalinux.html) to set up the cross-development environment.
+
+2. Build the benchmark-application on host.  
+	Run the following commands and `test_dpu_runner_mt` executable program will be generated.
+	```
+	cd benchmark-application
+	build -x build.sh
+	```
