@@ -95,3 +95,6 @@ Note that the default DPU integrated in SoM is B3136. Please use the correspondi
 	cd benchmark-application
 	build -x build.sh
 	```
+
+# Reference
+For more information, please refer to [wp529-som-benchmarks](https://www.xilinx.com/support/documentation/white_papers/wp529-som-benchmarks.pdf).
