@@ -43,13 +43,13 @@ kria-kv260-ai-benchmark
 
 # Set up instructions
 ```
-git clone https://gitenterprise.xilinx.com/aisw/kria-kv260-ai-benchmark.git
+git clone https://gitenterprise.xilinx.com/SOM/kria-kv260-ai-benchmark.git
 ```
 ## Download models
 ```
 cd kria-kv260-ai-benchmark/benchmark-application
-wget https://www.xilinx.com/bin/public/openDownload?filename=kv260-benchmark-models.tar.gz -O kv260-benchmark-models.tar.gz
-tar -xzvf kv260-benchmark-models.tar.gz
+wget https://www.xilinx.com/bin/public/openDownload?filename=kv260-benchmark-models-vai1.4.tar.gz -O kv260-benchmark-models-vai1.4.tar.gz
+tar -xzvf kv260-benchmark-models-vai1.4.tar.gz
 ```
 
 ## Copy the benchmark-application folder to the target
