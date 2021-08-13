@@ -59,10 +59,40 @@ cd ..
 scp -r benchmark-application root@[IP_OF_BOARD]:~/
 ```
 
+## Install the application runtime with dnf install
+
+1. Run the following command to setting up application runtime on the board.  
+```
+sudo dnf install packagegroup-kv260-aibox-reid.noarch
+```
+For more details about the package installation on the board, refer to [Setting up application runtime](https://xilinx.github.io/kria-apps-docs/docs/aibox-reid/docs/app_deployment_aib.html#introduction)
+
+2. Install the Benchmark_B4096 firmware  
+```
+sudo dnf install kv260-benchmark-b4096.k26_kv
+```
+
 # Running Benchmarks
 
 ## Running Individual Benchmark Model
 
+1. Switch to a different platform for different DPU arch benchmark test.  
+For B4096 DPU benchmark, activate `kv260-benchmark-b4096` firmware.
+```
+sudo xmutil kv260-benchmark-b4096
+```
+For B3136 DPU benchmark, activate `kv260-aibox-reid` firmware.
+```
+sudo xmutil kv260-aibox-reid
+```
+
+Note that when xmutil listapps reveals that there’s already another accelerator being activated apart from `kv260-benchmark-b4096` or `kv260-aibox-reid`, unload it first, then switch to `kv260-benchmark-b4096` or `kv260-aibox-reid`.
+```
+sudo xmutil unloadapp
+sudo xmutil kv260-benchmark-b4096
+```
+
+2. Run the Benchmark application 
 The following command is to run the `Resnet50` model in 1 thread.
 ```
 env SLEEP_MS=180000 ./test_dpu_runner_mt models/b3136/resnet50/resnet50.xmodel k_0 1
