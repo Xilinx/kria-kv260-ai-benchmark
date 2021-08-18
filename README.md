@@ -79,17 +79,17 @@ sudo dnf install kv260-benchmark-b4096.k26_kv
 1. Switch to a different platform for different DPU arch benchmark test.  
 For B4096 DPU benchmark, activate `kv260-benchmark-b4096` firmware.
 ```
-sudo xmutil kv260-benchmark-b4096
+sudo xmutil loadapp kv260-dpu-benchmark
 ```
 For B3136 DPU benchmark, activate `kv260-aibox-reid` firmware.
 ```
-sudo xmutil kv260-aibox-reid
+sudo xmutil loadapp kv260-aibox-reid
 ```
 
-Note that when xmutil listapps reveals that there’s already another accelerator being activated apart from `kv260-benchmark-b4096` or `kv260-aibox-reid`, unload it first, then switch to `kv260-benchmark-b4096` or `kv260-aibox-reid`.
+Note that when xmutil listapps reveals that there’s already another accelerator being activated apart from `kv260-dpu-benchmark` or `kv260-aibox-reid`, unload it first, then switch to `kv260-dpu-benchmark` or `kv260-aibox-reid`.
 ```
 sudo xmutil unloadapp
-sudo xmutil kv260-benchmark-b4096
+sudo xmutil loadapp kv260-dpu-benchmark
 ```
 
 2. Run the Benchmark application 
