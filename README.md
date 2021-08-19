@@ -45,7 +45,7 @@ kria-kv260-ai-benchmark
 Run the following commands on the board.
 ```
 sudo dnf install git
-git clone https://gitenterprise.xilinx.com/SOM/kria-kv260-ai-benchmark.git
+git clone https://github.com/Xilinx/kria-kv260-ai-benchmark.git
 ```
 ## Download models
 ```
