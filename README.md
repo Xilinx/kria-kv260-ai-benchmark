@@ -42,7 +42,9 @@ kria-kv260-ai-benchmark
 ```
 
 # Set up instructions
+Run the following commands on the board.
 ```
+sudo dnf install git
 git clone https://gitenterprise.xilinx.com/SOM/kria-kv260-ai-benchmark.git
 ```
 ## Download models
@@ -50,13 +52,6 @@ git clone https://gitenterprise.xilinx.com/SOM/kria-kv260-ai-benchmark.git
 cd kria-kv260-ai-benchmark/benchmark-application
 wget https://www.xilinx.com/bin/public/openDownload?filename=kv260-benchmark-models-vai1.4.tar.gz -O kv260-benchmark-models-vai1.4.tar.gz
 tar -xzvf kv260-benchmark-models-vai1.4.tar.gz
-```
-
-## Copy the benchmark-application folder to the target
-
-```
-cd ..
-scp -r benchmark-application root@[IP_OF_BOARD]:~/
 ```
 
 ## Install the application runtime with dnf install
