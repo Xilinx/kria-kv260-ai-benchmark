@@ -64,7 +64,7 @@ For more details about the package installation on the board, refer to [Setting 
 
 2. Install the Benchmark_B4096 firmware  
 ```
-sudo dnf install kv260-benchmark-b4096.k26_kv
+sudo dnf install kv260-dpu-benchmark.k26_kv
 ```
 
 # Running Benchmarks
@@ -72,7 +72,7 @@ sudo dnf install kv260-benchmark-b4096.k26_kv
 ## Running Individual Benchmark Model
 
 1. Switch to a different platform for different DPU arch benchmark test.  
-For B4096 DPU benchmark, activate `kv260-benchmark-b4096` firmware.
+For B4096 DPU benchmark, activate `kv260-dpu-benchmark` firmware.
 ```
 sudo xmutil loadapp kv260-dpu-benchmark
 ```
