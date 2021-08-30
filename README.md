@@ -45,6 +45,7 @@ kria-kv260-ai-benchmark
 Run the following commands on the board.
 ```
 sudo dnf install git
+export GIT_SSL_NO_VERIFY=1
 git clone https://github.com/Xilinx/kria-kv260-ai-benchmark.git
 ```
 ## Download models
@@ -90,11 +91,11 @@ sudo xmutil loadapp kv260-dpu-benchmark
 2. Run the Benchmark application 
 The following command is to run the `Resnet50` model in 1 thread.
 ```
-env SLEEP_MS=180000 ./test_dpu_runner_mt models/b3136/resnet50/resnet50.xmodel k_0 1
+env SLEEP_MS=180000 ./test_dpu_runner_mt models/b4096/resnet50/resnet50.xmodel k_0 1
 ```
 The following command is to run the `Resnet50` model in 2 thread.
 ```
-env SLEEP_MS=180000 ./test_dpu_runner_mt models/b3136/resnet50/resnet50.xmodel k_0 2
+env SLEEP_MS=180000 ./test_dpu_runner_mt models/b4096/resnet50/resnet50.xmodel k_0 2
 ```
 
 
